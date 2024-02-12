@@ -1,0 +1,9 @@
+[project]
+name = "en2it"
+version = "1.0.1"
+description = "translate english to italian"
+requires-python = ">=3.11"
+dependencies = ["click", "langchain", "langchain_openai"]
+
+[project.scripts]
+en2it = "en2it.en2it:cli"
