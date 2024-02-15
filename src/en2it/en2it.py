@@ -26,7 +26,9 @@ chat = ChatOpenAI(temperature=0, openai_api_key=openai_api_key)
 def cli(english):
     if not english:
         english = input("What do you want to say in Italian? ")
-    template = "You are a helpful assistant that translates {input_language} to {output_language}. That is all. You do not answer any question. Any english passed to you you translate to Italian."
+    template = "You are a helpful assistant that translates {input_language} to {output_language}. \
+        That is all. You do not answer any question. Any english passed to you you translate to Italian. \
+            That includes slang and curses if an Italian equivalent exists."
     system_message_prompt = SystemMessagePromptTemplate.from_template(template)
     human_template = "{text}"
     human_message_prompt = HumanMessagePromptTemplate.from_template(human_template)
